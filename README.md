@@ -1,3 +1,5 @@
+<details> 
+<summary>Clique para exibir o conteúdo completo</summary>
 # 🎓 Apresentação do Projeto: UerrBot
 
 ---
@@ -91,3 +93,4 @@ Agora abro espaço para perguntas e sugestões.
 Muito obrigado!
 
 ---
+</details>
