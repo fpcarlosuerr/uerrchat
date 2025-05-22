@@ -23,7 +23,7 @@ class UerrBot:
     def construir_chain(self):
         template = ChatPromptTemplate.from_messages([
             {"role": "system", "content": "Você é um assistente chamado Asimov e acessa informações fornecidas para responder perguntas."},
-            {"role": "user", "content": "Com base nas informações extraídas do site, responda a pergunta {pergunta}\n\n{documentos_informados}"}
+            {"role": "user", "content": "Com base nas informações extraídas do site, responda a pergunta\n\n {pergunta}\n\n{documentos_informados}"}
         ])
         return template | self.chat
 
@@ -42,7 +42,7 @@ def main():
     load_dotenv()
     api_key = os.getenv("API_KEY")  # pega a chave do .env
     url = "https://uerr.edu.br"
-    pergunta = input(f'Qual a pergunta para o portal {url}')
+    pergunta = input(f' Qual a pergunta para o portal {url} : ')
 
     bot = UerrBot(api_key)
     documentos = bot.carregar_documentos(url)
